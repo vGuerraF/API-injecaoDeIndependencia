@@ -4,12 +4,13 @@ export class FindUserByIdUseCase {
   }
 
   async execute(userId) {
-    let userFinded;
     if (!userId) {
       throw new Error("User id sended is invalid");
     }
-
-    userFinded = await this.repository.findById(userId);
+    const userFinded = await this.repository.findById(userId);
+    if (!userFinded) {
+      throw new Error(`UserId: ${userId} not found`);
+    }
     return userFinded;
   }
 }
