@@ -1,5 +1,3 @@
-import { UserEntity } from "../../entities/user";
-
 export class FindUserByIdUseCase {
   constructor(userRepository) {
     this.repository = userRepository;

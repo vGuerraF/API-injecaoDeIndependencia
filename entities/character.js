@@ -1,10 +1,11 @@
 import { randomUUID } from "node:crypto";
 
 export class CharacterEntity {
-  constructor(character) {
+  constructor(character, userId) {
     this.id = character.id ?? randomUUID();
     this.name = character.name;
     this.image = character.image;
+    this.userId = userId;
   }
 
   validate() {
@@ -15,6 +16,10 @@ export class CharacterEntity {
     if (!this.image) {
       throw new Error("Image invalid");
     }
+
+    if (!this.userId) {
+      throw new Error("User id not found");
+    }
   }
 
   getCharacter() {
@@ -22,6 +27,7 @@ export class CharacterEntity {
       id: this.id,
       name: this.name,
       image: this.image,
+      userId: this.userId,
     };
   }
 }

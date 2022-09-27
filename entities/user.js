@@ -18,9 +18,9 @@ export class UserEntity {
   }
 
   addCharacter(character) {
-    const newCharacter = new CharacterEntity(character);
+    const newCharacter = new CharacterEntity(character, this.id);
     newCharacter.validate();
-    this.characters.push({ ...newCharacter.getCharacter(), userId: this.id });
+    this.characters.push(newCharacter.getCharacter());
   }
 
   getUser() {
