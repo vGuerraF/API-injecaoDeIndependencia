@@ -8,7 +8,7 @@ export class UpdateUserUseCase {
 
   async execute(userUpdate, userId) {
     const userToUpdate = await this.findUserById.execute(userId);
-    const userModified = { ...userToUpdate, userUpdate };
+    const userModified = Object.assign(userToUpdate, userUpdate);
     const userValidated = new UserEntity(userModified);
     userValidated.validate();
     return this.repository.updateUser(userValidated.getUser());
