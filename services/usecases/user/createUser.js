@@ -1,4 +1,4 @@
-import { UserEntity } from "../../entities/user.js";
+import { UserEntity } from "../../../entities/user";
 
 export class CreateUserUseCase {
   constructor(userRepository) {

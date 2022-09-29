@@ -9,16 +9,8 @@ export class CharacterEntity {
   }
 
   validate() {
-    if (!this.name) {
-      throw new Error("Name invalid");
-    }
-
-    if (!this.image) {
-      throw new Error("Image invalid");
-    }
-
-    if (!this.userId) {
-      throw new Error("User id not found");
+    if (!this.name || !this.image) {
+      throw new Error("Character invalid");
     }
   }
 

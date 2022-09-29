@@ -1,5 +1,5 @@
 import { UserRepositoryMongoDb } from "./database/repository/userRepository.js";
-import { CreateUserUseCase } from "./services/usecases/createUser.js";
+import { CreateUserUseCase } from "./services/usecases/user/createUser.js";
 import { MongoDbConnection } from "./database/mongo/connection/connect.js";
 
 const connection = new MongoDbConnection();
