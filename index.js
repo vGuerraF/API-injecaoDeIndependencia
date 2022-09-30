@@ -8,7 +8,7 @@ const repository = new UserRepositoryMongoDb();
 const createUserUseCase = new CreateUserUseCase(repository);
 
 
-const newUserr = createUserUseCase.execute({
+const newUserr = await createUserUseCase.execute({
     name: "vncius",
     email: "vinicus@gmail.com",
     password: "12345v",

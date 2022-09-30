@@ -16,4 +16,8 @@ export class UserRepositoryMongoDb {
   async findById(id) {
     return await userDb.findOne({ id: id });
   }
+
+  async findAll() {
+    return await userDb.find();
+  }
 }
