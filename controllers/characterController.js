@@ -2,7 +2,8 @@ import { Controller } from "./controller.js";
 
 export class CharacterController extends Controller {
   constructor(service, findCharacterByName) {
-    super(service), (this.findCharacterByName = findCharacterByName);
+    super(service);
+    this.findCharacterByName = findCharacterByName;
   }
 
   async findByName(req, res) {
