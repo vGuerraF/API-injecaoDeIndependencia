@@ -1,6 +1,6 @@
 import { characterRepositoryMongoDb } from "../database/repository/characterRepository.js";
 import { CreateCharacterUseCase } from "../services/usecases/character/createCharacter.js";
-import { FindCharacterByIdUseCase } from "../services/usecases/character/findCharacterById";
+import { FindCharacterByIdUseCase } from "../services/usecases/character/findCharacterById.js";
 import { UpdateCharacterUseCase } from "../services/usecases/character/updateCharacter.js";
 import { CharacterDeleteUseCase } from "../services/usecases/character/deleteCharacter.js";
 import { FindCharacterByNameUseCase } from "../services/usecases/character/findCharacterByName.js";

@@ -3,7 +3,7 @@ export class FindAllUsersUseCase {
     this.repository = userRepository;
   }
 
-  async execuse() {
+  async execute() {
     return await this.repository.findAll();
   }
 }

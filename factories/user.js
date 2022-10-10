@@ -32,5 +32,5 @@ export function makeUserFactory(router) {
 
   const userRoute = new UserRoute(userController, router);
 
-  return userRoutes;
+  return userRoute;
 }

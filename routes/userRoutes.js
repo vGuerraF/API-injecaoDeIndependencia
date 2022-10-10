@@ -5,10 +5,11 @@ export class UserRoute {
   }
 
   route() {
-    router.get("/", this.controller.findAll());
-    router.post("/create", this.controller.create());
-    router.patch("/update/:id", this.controller.update());
-    router.delete("/delete/:id", this.controller.delete());
-    router.get("/find/:id", this.controller.findById());
+    this.router.get("/", (req, res) => this.controller.findAll(req, res));
+    this.router.post("/create", (req, res) => this.controller.create(req, res));
+    this.router.patch("/update/:id", (req, res) => this.controller.update(req, res));
+    this.router.delete("/delete/:id", (req, res) => this.controller.delete(req, res));
+    this.router.get("/find/:id", (req, res) => this.controller.findById(req, res));
+    return this.router;
   }
 }
